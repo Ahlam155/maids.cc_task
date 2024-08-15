@@ -1,0 +1,21 @@
+<mat-card class="card">
+  <mat-card-header>
+      <div mat-card-avatar class="header-image" [style.background-image]="'url(' + userData.avatar + ')'"></div>
+      <mat-card-title>{{userData.first_name}} {{userData.last_name}}</mat-card-title>
+      <mat-card-subtitle>Maid ID: {{userData.id}}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+      <p>
+          {{userData.email}}
+      </p>
+  </mat-card-content>
+  <mat-card-actions>
+      <button mat-raised-button color="primary" class="mat-btn-primary">
+          <div class="d-flex gap-2 align-items-center" (click)="navigateToUserDetails(userData.id)">
+              <span>Details</span>
+              <mat-icon class="arrow_right">arrow_right_alt</mat-icon>
+          </div> 
+      </button>
+      
+  </mat-card-actions>
+</mat-card>

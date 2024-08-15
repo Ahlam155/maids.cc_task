@@ -1,0 +1,33 @@
+<div class="nav-container d-flex align-items-center justify-content-between">
+  <div class="logo">
+    <img class="relative d-none d-md-block" src="assets/logos/maids-logo.svg" width="245" height="72" loading="lazy"
+      alt="Maids.cc Logo - Large">
+
+    <img class="relative d-block d-md-none" src="assets/logos/logo.svg" width="50" height="48" loading="lazy"
+      alt="Maids.cc Logo - Small">
+  </div>
+  <mat-form-field>
+    <input matInput [formControl]="searchControl" [matAutocomplete]="auto" placeholder="Search By ID">
+    <mat-autocomplete #auto="matAutocomplete">
+     
+      <ng-container *ngIf="isTyping">
+
+        <mat-option *ngIf=" user$ | async as user ;else loading" (click)="navigateToUserDetails(user?.id)">
+        
+          {{ user?.first_name + ' ' + user?.last_name }}
+        </mat-option>
+   
+      <ng-template #loading>
+        <mat-option >
+          <ng-container *ngIf="userNotFound$ | async ; else showLoading"  >
+              User Not Exist
+          </ng-container>
+          <ng-template #showLoading>
+              ...Loading
+          </ng-template>
+        </mat-option>
+      </ng-template>
+    </ng-container>
+    </mat-autocomplete>
+  </mat-form-field>
+</div>

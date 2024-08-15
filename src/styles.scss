@@ -1,1 +1,122 @@
 /* You can add global styles to this file, and also import other style files */
+:root{
+    --main-color:#0c122b ;
+    --secondary-color:#2a4475
+}
+html, body { height: 100%; }
+body { 
+    margin: 0; 
+    font-family: Roboto, "Helvetica Neue", sans-serif;     
+    background: linear-gradient( 145deg, #a4aed9, #436ab2);
+}
+
+
+*{
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;     
+
+}
+a{
+    text-decoration: none;
+    
+}
+::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background:#9692b3 ;
+    opacity: 0.6;
+    border-radius: 16px;
+  }
+  
+.mat-mdc-paginator {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+
+}
+.mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-line-ripple::after {
+    border-bottom-color: var(--mdc-filled-text-field-focus-active-indicator-color);
+}
+.mdc-text-field--filled:not(.mdc-text-field--disabled) {
+    border:1px solid #436ab2;
+    background-color: #f1f5f7 !important;
+    border-radius: 2rem;
+}
+.mat-mdc-paginator-container {
+    justify-content: center !important;
+}
+.mat-mdc-paginator {
+    background-color: var(--main-color) !important;
+}
+.mat-mdc-select-panel {
+    background-color:  var(--secondary-color) !important;
+}
+.mat-mdc-option .mdc-list-item__primary-text {
+    color: var(--main-color) !important;
+}
+.mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-line-ripple::after {
+    border-bottom-color: var(--secondary-color) !important;
+}
+.mat-mdc-option.mdc-list-item--selected:not(.mdc-list-item--disabled) .mdc-list-item__primary-text {
+    color:unset !important
+}
+.mat-mdc-paginator-page-size {
+    display: none !important;
+}
+.mat-mdc-autocomplete-panel {
+    background-color: #e6eaef !important;
+}
+.mat-mdc-autocomplete-panel {
+    border-radius: 16px !important;
+    -webkit-border-radius: 16px !important;
+    -moz-border-radius: 16px !important;
+    -ms-border-radius: 16px !important;
+    -o-border-radius: 16px !important;
+}
+.mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-text-field__input ,
+.mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-text-field__input::placeholder
+{
+    color: #333333 !important;
+}
+.loading-spinner {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: rgba(0,0,0,.6);
+    z-index: 99999999999;
+    .mat-mdc-progress-spinner .mdc-circular-progress__determinate-circle, .mat-mdc-progress-spinner .mdc-circular-progress__indeterminate-circle-graphic {
+        stroke: #9d9aa8 !important;
+    }
+}
+.mat-mdc-form-field-subscript-wrapper {
+    height: 0px;
+}
+.position-relative{
+    position: relative !important;
+}
+.position-absolute{
+    position:absolute!important;
+}
+.arrow_backward {
+    color: white;
+    width: 48px !important;
+    height: 60px !important;
+    font-size: 36px !important;
+    cursor: pointer;
+    @media(max-width:767px){
+        font-size: 29px !important;
+
+    }
+}

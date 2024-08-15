@@ -1,0 +1,27 @@
+
+.nav-container{
+  background-color: rgb(245 248 255);
+  padding: 40px;
+  height:88px;
+  margin-bottom: 30px;
+  @media(max-width:767px){
+    padding: 20px;
+  
+  }
+}
+.example-form {
+    min-width: 335px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+  
+
+.mat-mdc-form-field {
+    width: 55%;
+    max-width:550px;
+    min-width: 250px;
+}
